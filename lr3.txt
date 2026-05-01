@@ -1,0 +1,46 @@
+// Завдання 1
+
+function random(min, max) {
+  return min + Math.random() * (max - min);
+}
+
+// Приклади роботи:
+console.log(random(1, 5)); // напр. 1.2345623452
+console.log(random(1, 5)); // напр. 3.7894332423
+
+// Завдання 2
+
+function isPrime(num) {
+  if (num <= 1) return false; // числа <= 1 не є простими
+  
+  // Перевіряємо дільники від 2 до квадратного кореня з числа
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+
+// Приклад використання:
+
+console.log(isPrime(17)); // true
+console.log(isPrime(15)); // false
+
+// Завдання 3
+
+function recursiveSum(n) {
+  // Базовий випадок
+  if (n === 0) return 0;
+  if (n === 1) return 1;
+  if (n === -1) return -1;
+
+  // Рекурсивний крок
+  if (n > 1) {
+    return n + recursiveSum(n - 1);
+  } else {
+    return n + recursiveSum(n + 1);
+  }
+}
+
+// Приклад використання:
+console.log(recursiveSum(5));  // 15 (1 + 2 + 3 + 4 + 5)
+console.log(recursiveSum(-3)); // -6 (-1 + -2 + -3)
