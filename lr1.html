@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Перевірка логіну</title>
+</head>
+<body>
+    <script>
+        let login = prompt("Введіть логін:");
+
+        if (login === "admin") {
+            let password = prompt("Введіть пароль:");
+
+            if (password === "Gospodar") {
+                alert("Ласкаво просимо!");
+            } else {
+                if (password === "" || password === null) {
+                    alert("Скасовано");
+                } else {
+                    alert("Неправильний пароль");
+                }
+            }
+
+        } else {
+            if (login === "" || login === null) {
+                alert("Скасовано");
+            } else {
+                alert("Я вас не знаю");
+            }
+        }
+    </script>
+</body>
+</html>
