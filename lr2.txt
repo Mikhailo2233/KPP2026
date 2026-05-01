@@ -1,4 +1,4 @@
-Завдання 1
+// Завдання 1
 
 let user = {};
 user.name = "Марк";
@@ -6,7 +6,7 @@ user.surname = "Сміт";
 user.name = "Тарас";
 delete user.name;
 
-Завдання 2
+// Завдання 2
 
 function isEmpty(obj) {
   for (let key in obj) {
@@ -17,29 +17,26 @@ function isEmpty(obj) {
 }
 
 // Перевірка
+
 let schedule = {};
 alert( isEmpty(schedule) ); // true
-
 schedule["8:30"] = "Вставай";
 alert( isEmpty(schedule) ); // false
 
-Завдання 3
+// Завдання 3
 
 let salaries = {
   Jarik: 1000,
   Anna: 1600,
   Miko: 1300
 };
-
 let sum = 0;
 for (let key in salaries) {
   sum += salaries[key];
 }
-
 alert(sum); // 3900
 
-
-Завдання 4
+// Завдання 4
 
 function multiplyNumeric(obj) {
   for (let key in obj) {
@@ -48,11 +45,9 @@ function multiplyNumeric(obj) {
     }
   }
 }
-
 let menu = {
   width: 200,
   height: 300,
   title: "Моє меню"
 };
-
 multiplyNumeric(menu);
